@@ -27,7 +27,9 @@
 					
 					<div class="row mt-2 mb-2">
 						<div class="col mb-2">
-							<span class="perfilPainelNome">Nome do Usuário</span>
+							<span class="perfilPainelNome">
+								<?php echo $this->view->info_usuario['nome'] ?>
+							</span>
 						</div>
 					</div>
 
@@ -35,17 +37,23 @@
 
 						<div class="col">
 							<span class="perfilPainelItem">Tweets</span><br />
-							<span class="perfilPainelItemValor">0</span>
+							<span class="perfilPainelItemValor">
+								<?php echo $this->view->total_tweets['total_tweets'] ?>
+							</span>
 						</div>
 
 						<div class="col">
 							<span class="perfilPainelItem">Seguindo</span><br />
-							<span class="perfilPainelItemValor">0</span>
+							<span class="perfilPainelItemValor">
+								<?php echo $this->view->total_seguindo['total_seguindo'] ?>
+							</span>
 						</div>
 
 						<div class="col">
 							<span class="perfilPainelItem">Seguidores</span><br />
-							<span class="perfilPainelItemValor">0</span>
+							<span class="perfilPainelItemValor">
+								<?php echo $this->view->total_seguidores['total_seguidores'] ?>
+							</span>
 						</div>
 
 					</div>
@@ -81,17 +89,17 @@
 							<div class="card-body">
 								<div class="row">
 									<div class="col-md-6">
-										<?= $usuario['nome'] ?>
+										<?php echo $usuario['nome'] ?>
 									</div>
 								
 									<div class="col-md-6 d-flex justify-content-end">
 										<div>
 											<?php if($usuario['seguindo_sn'] == 0) { ?>
-												<a href="/acao?acao=seguir&id_usuario=<?=$usuario['id']?>" class="btn btn-success">Seguir</a>
+												<a href="/acao?acao=seguir&id_usuario=<?php echo $usuario['id'] ?>" class="btn btn-success">Seguir</a>
 											<?php } ?>
 
 											<?php if($usuario['seguindo_sn'] == 1) { ?>
-												<a href="/acao?acao=deixar_de_seguir&id_usuario=<?=$usuario['id']?>" class="btn btn-danger">Deixar de seguir</a>
+												<a href="/acao?acao=deixar_de_seguir&id_usuario=<?php echo $usuario['id'] ?>" class="btn btn-danger">Deixar de seguir</a>
 											<?php } ?>
 										</div>
 									</div>
@@ -101,6 +109,7 @@
 					</div>
 				</div>
 			<?php } ?>
+
 		</div>
 	</div>
 </div>

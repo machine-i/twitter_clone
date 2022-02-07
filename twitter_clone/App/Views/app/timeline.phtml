@@ -28,7 +28,7 @@
 					<div class="row mt-2 mb-2">
 						<div class="col mb-2">
 							<span class="perfilPainelNome">
-								<?= $this->view->info_usuario['nome'] ?>
+								<?php echo $this->view->info_usuario['nome'] ?>
 							</span>
 						</div>
 					</div>
@@ -38,21 +38,21 @@
 						<div class="col">
 							<span class="perfilPainelItem">Tweets</span><br />
 							<span class="perfilPainelItemValor">
-								<?= $this->view->total_tweets['total_tweet'] ?>
+								<?php echo $this->view->total_tweets['total_tweets'] ?>
 							</span>
 						</div>
 
 						<div class="col">
 							<span class="perfilPainelItem">Seguindo</span><br />
 							<span class="perfilPainelItemValor">
-								<?= $this->view->total_seguindo['total_seguindo'] ?>
+								<?php echo $this->view->total_seguindo['total_seguindo'] ?>
 							</span>
 						</div>
 
 						<div class="col">
 							<span class="perfilPainelItem">Seguidores</span><br />
 							<span class="perfilPainelItemValor">
-								<?= $this->view->total_seguidores['total_seguidores'] ?>
+								<?php echo $this->view->total_seguidores['total_seguidores'] ?>
 							</span>
 						</div>
 
@@ -77,11 +77,12 @@
 				</div>
 			</div>
 
-			<?php foreach($this->view->tweets as $id_tweet => $tweet) { ?>
+			<?php foreach ($this->view->tweets as $id_tweet => $tweet) { ?>
 				<div class="row tweet">
 					<div class="col">
-						<p><strong><?=$tweet['nome']?></strong> <small><span class="text text-muted">- <?=$tweet['data']?></span></small></p>
-						<p><?=$tweet['tweet']?></p>
+						<p><strong><?php echo $tweet['nome'] ?></strong> <small><span class="text text-muted">- <?php echo $tweet['data'] ?></span></small></p>
+						<p><?php echo $tweet['tweet'] ?></p>
+
 						<br />
 						<?php if($tweet['id_usuario'] == $_SESSION['id']) { ?>
 							<form>
@@ -93,7 +94,6 @@
 					</div>
 				</div>
 			<?php } ?>
-
 
 		</div>
 

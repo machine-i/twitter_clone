@@ -1,24 +1,24 @@
 <?php
 
-namespace App;
+	namespace App;
 
-class Connection {
+	class Connection {
+		
+		public static function getDb() { //Podemos chamar o método diretamente usando o "::", devido ao mesmo ser um método estático.
+			try {
 
-	public static function getDb() {
-		try {
+				$conn = new \PDO( // '\' para que seja utilizado o namespace raiz e não o namespace 'App'.
+					"mysql:host=localhost;dbname=twitter_clone;charset=utf8",
+					"root",
+					""
+				);
 
-			$conn = new \PDO(
-				"mysql:host=localhost;dbname=twitter_clone;charset=utf8",
-				"root",
-				"" 
-			);
+				return $conn;
 
-			return $conn;
-
-		} catch (\PDOException $e) {
-			//.. tratar de alguma forma ..//
-		}
+			} catch(\PDOException $e) { // '\' para que seja utilizado o namespace raiz e não o namespace 'App'.
+				//... tratar o erro de alguma forma ...//
+			}
+		} 
 	}
-}
 
 ?>
