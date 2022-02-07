@@ -1,6 +1,8 @@
 # twitter_clone
 Tal projeto, foi realizado unicamente para fins de aprendizado.
 
+<img src="https://user-images.githubusercontent.com/68506101/152866261-55115509-116d-4389-8521-0a7a4a3bd1cd.png">
+
 Para utilizar é necessário instalar o programa XAMPP e inicializar os módulos do Apache e MySQL. Em seu computador, vá até o diretório "C:" e abra a pasta "xampp". A pasta chamada "twitter_clone" desse repositório deve ser armazenada dentro da tal pasta (xampp).
 
 O restante dos arquivos, "htdocs" e ".htaccess" serão levados para dentro da pasta "htdocs" do seu computador que se localiza dentro da pasta "xampp".
