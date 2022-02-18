@@ -5,9 +5,7 @@ Tal projeto, foi realizado unicamente para fins de aprendizado.
 
 Para utilizar é necessário instalar o programa XAMPP e inicializar os módulos do Apache e MySQL. Em seu computador, vá até o diretório "C:" e abra a pasta "xampp". A pasta chamada "twitter_clone" desse repositório deve ser armazenada dentro da tal pasta (xampp).
 
-O restante dos arquivos, "htdocs" e ".htaccess" serão levados para dentro da pasta "htdocs" do seu computador que se localiza dentro da pasta "xampp".
-
-Estando dentro da pasta "htdocs" do seu computador, cuja localização é na pasta "xampp", crie uma nova pasta chamada "bkp". Mova todos os arquivos localizados dentro da pasta "htdocs" do seu computador para dentro da pasta que acaba de criar, a "bkp". Deixando a pasta "htdocs" do seu computador apenas com um único diretório, o "bkp".
+Dentro da pasta "xampp", há uma pasta chamada "htdocs". Dentro dela, crie uma nova pasta chamada "bkp". Mova todos os arquivos para dentro da pasta que acaba de criar, a "bkp". Deixando a pasta "htdocs" do seu computador apenas com um único diretório, o "bkp".
 
 O diretório "htdocs" disponibilizado nesse repositório, contém alguns arquivos. Tais arquivos devem ser levados para a pasta "htdocs" do seu computador. O arquivo ".htaccess" também deve ser levado para a pasta "htdocs" do seu computador.
 
@@ -15,7 +13,7 @@ O diretório "htdocs" disponibilizado nesse repositório, contém alguns arquivo
 
 Com o programa do XAMPP aberto e os módulos do Apache e MySQL inicializados, clique em "Admin" do módulo "MySQL", abrindo, dessa forma, o "phpmyadmin".
 
-Com a página do "phpmyadmin" aberta, vá até a opção "SQL" e execute as seguintes instruções:
+Com a página do "phpmyadmin" aberta, vá até a aba "SQL" e execute as seguintes instruções:
 <hr>
 create database twitter_clone;
 
